@@ -27,8 +27,11 @@ router.get('/details/:bid',bookController.getBookDetails)
 // route for createRequest
 router.post('/create-request',jwtMiddleware,requestController.registerRequest)
 
-// route for viewRequest
-router.get('/view-requests',jwtMiddleware,requestController.viewRequest)
+// route for viewRecievedRequest
+router.get('/view-recieved-requests',jwtMiddleware,requestController.viewRecievedRequest)
+
+// route for viewSendRequest
+router.get('/view-send-requests',jwtMiddleware,requestController.viewSendRequest)
 
 // route for editBook
 router.put('/book/edit/:bid',jwtMiddleware,multerConfiq.single("bookImage"),bookController.editBook)

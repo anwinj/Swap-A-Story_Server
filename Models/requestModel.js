@@ -33,6 +33,14 @@ const requestSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    bookId1:{
+        type:String,
+        required:true
+    },
+    bookId2:{
+        type:String,
+        required:true
+    },
     approved:{
         type:Boolean,
         required:true
