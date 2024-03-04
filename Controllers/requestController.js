@@ -42,7 +42,7 @@ exports.approveRequest = async (req,res)=>{
     const {_id,bookName1,bookName2,bookAuthor1,bookAuthor2,bookImage1,bookImage2,userId1,userId2,bookId1,bookId2} = req.body
     try{
         const updateRequest = await requests.findByIdAndUpdate({_id},{bookName1,bookName2,bookAuthor1,bookAuthor2,bookImage1,bookImage2,userId1,userId2,bookId1,bookId2,approved:true},{new:true})
-        console.log(updateRequest);
+        // console.log(updateRequest);
         await updateRequest.save()
         res.status(200).json(updateRequest)
     }catch(err){
