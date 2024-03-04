@@ -39,4 +39,10 @@ router.put('/book/edit/:bid',jwtMiddleware,multerConfiq.single("bookImage"),book
 // route for deleteBook
 router.delete('/book/delete/:bid',jwtMiddleware,bookController.deleteBook)
 
+// route for approveRequest
+router.put('/approve-request',jwtMiddleware,requestController.approveRequest)
+
+// router for deleteRequest
+router.delete('/request/delete/:reqId',jwtMiddleware,requestController.deleteRequest)
+
 module.exports = router

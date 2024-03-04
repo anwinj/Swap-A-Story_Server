@@ -70,6 +70,7 @@ exports.editBook = async(req,res)=>{
 // delete book
 exports.deleteBook = async(req,res)=>{
     const {bid} = req.params
+    // console.log(bid);
     try{
         const deleteData = await books.findByIdAndDelete({_id:bid})
         res.status(200).json(deleteData)
